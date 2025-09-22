@@ -15,6 +15,9 @@ namespace GameProgramming_Arrays_LucasHardy
         static int[] gunAmmo = new int[5];
 
         static int[] maxGunAmmo = new int[5];
+
+        static string CurrentWeapon = gunNames[0];
+        static int CurrentWeaponAmmo = gunAmmo[0];
         static void Main(string[] args)
         {
             gunAmmo[0] = 16;
@@ -28,7 +31,6 @@ namespace GameProgramming_Arrays_LucasHardy
             maxGunAmmo[2] = 5;
             maxGunAmmo[3] = 25;
             maxGunAmmo[4] = 100;
-          
 
 
 
@@ -36,65 +38,65 @@ namespace GameProgramming_Arrays_LucasHardy
 
 
 
-
-            Console.WriteLine(gunNames[0]);
-            Console.WriteLine("has");
-            Console.WriteLine(gunAmmo[0]);
-            Console.WriteLine("ammo");
+            Console.Write(gunNames[0]);
+            Console.Write(" has ");
+            Console.Write(gunAmmo[0]);
+            Console.Write(" ammo.");
             Console.ReadKey();
             Console.Clear();
 
-            
-
             ShootBullets("Pistol");
             ShootBullets("Pistol");
             ShootBullets("Pistol");
 
-
-
-            Console.WriteLine(gunNames[0]);
-            Console.WriteLine("has");
-            Console.WriteLine(gunAmmo[0]);
-            Console.WriteLine("ammo");
+            Console.Write(gunNames[0]);
+            Console.Write(" has ");
+            Console.Write(gunAmmo[0]);
+            Console.Write(" ammo.");
             Console.ReadKey();
             Console.Clear();
 
             ReloadGun("Pistol");
 
-            Console.WriteLine(gunNames[0]);
-            Console.WriteLine("has");
-            Console.WriteLine(gunAmmo[0]);
-            Console.WriteLine("ammo");
+            Console.Write(gunNames[0]);
+            Console.Write(" has ");
+            Console.Write(gunAmmo[0]);
+            Console.Write(" ammo.");
             Console.ReadKey();
             Console.Clear();
+
 
             Console.WriteLine($"You switch to {gunNames[2]}");
+
             Console.WriteLine();
 
-            Console.WriteLine(gunNames[2]);
-            Console.WriteLine("has");
-            Console.WriteLine(gunAmmo[2]);
-            Console.WriteLine("ammo");
+            Console.Write(gunNames[2]);
+            Console.Write(" has ");
+            Console.Write(gunAmmo[2]);
+            Console.Write(" ammo.");
             Console.ReadKey();
             Console.Clear();
+
 
             ShootBullets("Shotgun");
 
-            Console.WriteLine(gunNames[2]);
-            Console.WriteLine("has");
-            Console.WriteLine(gunAmmo[2]);
-            Console.WriteLine("ammo");
+            Console.Write(gunNames[2]);
+            Console.Write(" has ");
+            Console.Write(gunAmmo[2]);
+            Console.Write(" ammo.");
             Console.ReadKey();
             Console.Clear();
+
 
             ReloadGun("Shotgun");
 
-            Console.WriteLine(gunNames[2]);
-            Console.WriteLine("has");
-            Console.WriteLine(gunAmmo[2]);
-            Console.WriteLine("ammo");
+            Console.Write(gunNames[2]);
+            Console.Write(" has ");
+            Console.Write(gunAmmo[2]);
+            Console.Write(" ammo.");
             Console.ReadKey();
             Console.Clear();
+
 
         }
 
@@ -140,7 +142,9 @@ namespace GameProgramming_Arrays_LucasHardy
         static void ShowHUD()
         {
             Console.WriteLine("{0,0}{1,10}", "Current Weapon:", "Weapon Ammo:");
-            Console.WriteLine("{0,0}{1,10}", gunName[indexOfGunName], gunAmmo[indexOfGunName]);
+            Console.WriteLine("{0,0}{1,10}", CurrentWeapon, CurrentWeaponAmmo);
+            Console.ReadKey();
+            Console.Clear();
 
 
         }
